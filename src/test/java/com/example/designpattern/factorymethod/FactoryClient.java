@@ -1,10 +1,10 @@
 package com.example.designpattern.factorymethod;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 @DisplayName("팩토리 메서드 패턴")
 public class FactoryClient {
@@ -33,6 +33,6 @@ public class FactoryClient {
         final PizzaStore pizzaStore = new NewYorkPizzaStore();
 
         assertThatThrownBy(() -> pizzaStore.makePizza("hawaiian"))
-                .isInstanceOf(IllegalArgumentException.class);
+            .isInstanceOf(IllegalArgumentException.class);
     }
 }
